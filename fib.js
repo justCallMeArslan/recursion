@@ -24,7 +24,9 @@ export function fibLoop(n) {
 }
 
 
-export function fibRecur(n) {
+export function fibRecur(n) { 
+    console.log("This was printed recursively"); // double checked with 10 and 3, succesful
+
     if (!Number.isInteger(n) || n < 0) {
         return undefined;
     }
@@ -43,3 +45,4 @@ export function fibRecur(n) {
 
     return arr;
 }
+
