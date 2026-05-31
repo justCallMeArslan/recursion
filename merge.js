@@ -1,10 +1,3 @@
-// Pseudocode for alghoritm 
-
-// Sort the left half
-// Sort the right part
-// Merge them together 
-
-
 export function mergeSort(array, start, end) {
     if (start === undefined) {
         start = 0;
@@ -33,8 +26,8 @@ export function mergeSort(array, start, end) {
 function merge(array, start, mid, end) {
     let temp = [];
 
-    let i = start;
-    let j = mid + 1;
+    let i = start; // for values for left part
+    let j = mid + 1; // for values for right part 
 
     while (i <= mid && j <= end) { // from start to end of their part (left and right parts)
         // but important note that && is condition , so both part shoud be present at the time, 
