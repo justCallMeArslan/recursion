@@ -1,5 +1,22 @@
-// mergeSort([]) →[]
-// mergeSort([73]) →[73]
-// mergeSort([1, 2, 3, 4, 5]) →[1, 2, 3, 4, 5]
-// mergeSort([3, 2, 1, 13, 8, 5, 0, 1]) →[0, 1, 1, 2, 3, 5, 8, 13]
-// mergeSort([105, 79, 100, 110]) →[79, 100, 105, 110]
+import { mergeSort } from "./merge";
+
+test("empty array as input", () => {
+    expect(mergeSort([])).toEqual([]);
+})
+
+
+test("simple array", () => {
+    expect(mergeSort([73])).toEqual([73]);
+})
+
+test("correct array", () => {
+    expect(mergeSort([1, 2, 3, 4, 5])).toEqual([1, 2, 3, 4, 5]);
+})
+
+test("large array", () => {
+    expect(mergeSort([3, 2, 1, 13, 8, 5, 0, 1])).toEqual([0, 1, 1, 2, 3, 5, 8, 13]);
+})
+
+test("big numbers", () => {
+    expect(mergeSort([105, 79, 100, 110])).toEqual([79, 100, 105, 110]);
+})
