@@ -12,7 +12,7 @@ export function mergeSort(array, start, end) {
     if (start >= end) {
         return array;
     };
-    let mid = Math.floor((start + end) / 2);
+    const mid = Math.floor((start + end) / 2);
 
     mergeSort(array, start, mid); // splits left part recursevely
     mergeSort(array, mid + 1, end); // splits right part recursevely
@@ -24,7 +24,7 @@ export function mergeSort(array, start, end) {
 }
 
 function merge(array, start, mid, end) {
-    let temp = [];
+    let temp = []; // temp array for storing merged
 
     let i = start; // for values for left part
     let j = mid + 1; // for values for right part 
